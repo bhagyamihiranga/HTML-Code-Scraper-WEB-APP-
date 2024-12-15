@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body{
+            background-color: #1b1b1b;
+            color : #fff
+        }
+        .container-all{
+            width: 100%;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin : 60px 0;
+        }
+
+        .container-all .head{
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .container-all .head h1{
+            font-size: 60px;
+        }
+        .container-all .head .h2{
+            width: 100%;
+            text-align: center;
+            margin:  40px 0;
+        }
+        .container-all .head h2{
+            font-size: 40px;
+            
+        }
+        .container-all .head span{
+            padding : 20px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 10px;
+           
+            
+        }
+        .data{
+            width: 100%;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin : 40px 0;
+        }
+        .details{
+            width: 100%;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin : 60px 0;
+        }
+        
+        .buttonDownload {
+            display: inline-block;
+            position: relative;
+            padding: 10px 25px;
+            background-color: #4CC713;
+            color: white;
+            font-family: sans-serif;
+            text-decoration: none;
+            font-size: 0.9em;
+            text-align: center;
+            text-indent: 15px;
+            border: none;
+           }
+           
+           .buttonDownload:hover {
+            background-color: #45a21a;
+            color: white;
+           }
+           
+           .buttonDownload:before, .buttonDownload:after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 52%;
+           }
+           
+           .buttonDownload:before {
+            width: 10px;
+            height: 2px;
+            border-style: solid;
+            border-width: 0 2px 2px;
+           }
+           
+           .buttonDownload:after {
+            width: 0;
+            height: 0;
+            margin-left: 3px;
+            margin-top: -7px;
+            border-style: solid;
+            border-width: 4px 4px 0 4px;
+            border-color: transparent;
+            border-top-color: inherit;
+            animation: downloadArrow 1s linear infinite;
+            animation-play-state: paused;
+           }
+           
+           .buttonDownload:hover:before {
+            border-color: #cdefbd;
+           }
+           
+           .buttonDownload:hover:after {
+            border-top-color: #cdefbd;
+            animation-play-state: running;
+           }
+           
+           @keyframes downloadArrow {
+            0% {
+             margin-top: -7px;
+             opacity: 1;
+            }
+           
+            0.001% {
+             margin-top: -15px;
+             opacity: 0.4;
+            }
+           
+            50% {
+             opacity: 1;
+            }
+           
+            100% {
+             margin-top: 0;
+             opacity: 0.4;
+            }
+           }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container-all">
+        <div class="head">
+            <h1></h1>
+           <div class="h2">
+            <h2>NETRAY <span>SOLUTIONS</span></h2>
+           </div>
+
+           <div class="data">
+            <div class="details">
+               
+                <aside class="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono">
+                  <div class="flex justify-between items-center">
+                    <div class="flex space-x-2 text-red-500">
+                      <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <p class="text-sm">bash</p>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-green-400">$ file has been copyed</p>
+                    <p class="text-white">+ now you can</p>
+                    <p class="text-white">download file by clicking download button</p>
+                    <p class="text-green-400">$</p>
+                  </div>
+                </aside>
+                
+            </div>
+
+            <div class="buttooon">
+
+
+                <form action="/download_file" method = "POST">
+                   
+
+<button class="buttonDownload">Download</button>
+                </form>
+
+            </div>
+           </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Netray Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body{
+            background-color: #1b1b1b;
+            color : #fff
+        }
+        .container-all{
+            width: 100%;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin : 60px 0;
+        }
+
+        .container-all .head{
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .container-all .head h1{
+            font-size: 60px;
+        }
+        .container-all .head .h2{
+            width: 100%;
+            text-align: center;
+            margin:  40px 0;
+        }
+        .container-all .head h2{
+            font-size: 40px;
+            
+        }
+        .container-all .head span{
+            padding : 20px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 10px;
+           
+            
+        }
+        .container-all .form{
+            margin-top: 100px;
+        }
+      
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container-all">
+        <div class="head">
+            <h1></h1>
+           <div class="h2">
+            <h2>NETRAY <span>SOLUTIONS</span></h2>
+           </div>
+        </div>
+    
+
+
+        <div class="form">
+            <div class="flex flex-col h-screen dark">
+                <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+                  <h2 class="text-2xl font-bold text-gray-200 mb-4">Enter website file url (html.css,js) </h2>
+              
+                  <form class="flex flex-col" action = '/save_file' method = "POST">
+                    <input placeholder="Enter your url address" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="url" required name="ip">
+              
+                    <button class="bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-green-600 hover:to-blue-600 transition ease-in-out duration-150" type="submit">Get Code</button>
+                  </form>
+              
+                  <div class="flex justify-center mt-4">
+                    <a class="text-sm text-gray-400 hover:underline" href="https://netraysolution.cloud">NETRAY SOLUTION</a>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
